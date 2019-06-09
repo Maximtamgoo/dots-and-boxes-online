@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head %>
+  <link rel="stylesheet" href="../css/grid.css">
+</head>
+
+<body>
+  <header class="container">
+    <% include ../partials/navbar %>
+  </header>
+
+<div class="container flex">
+  <div class="grid-section">
+    <div id="player-turn">Player Turn</div>
+    <div id="div-grid"><% include ../partials/defaultGrid %></div>
+  </div>
+
+  <div class="setup-section">
+    <div class="setup-item">
+      <label class="setup-item-lbl" for="size-drop-down">Grid Size</label>
+      <select class="select-css size-drop-down">
+        <option value="3">3 x 3</option>
+        <option selected value="4">4 x 4</option>
+        <option value="5">5 x 5</option>
+        <option value="6">6 x 6</option>
+        <%# <option value="7">7 x 7</option> %>
+        <%# <option value="8">8 x 8</option> %>
+      </select>
+    </div>
+    <%# <div class="setup-item">
+      <label class="setup-item-lbl" for="player-1-Color">Player 1 Color</label>
+      <select disabled class="select-css player-1-Color">
+        <option value="color">color</option>
+        <option value="color">color</option>
+      </select>
+    </div> %>
+    <%# <div class="setup-item">
+      <label class="setup-item-lbl" for="player-2-Color">Player 2 Color</label>
+      <select disabled class="select-css player-2-Color">
+        <option style="background:red" value="color">Red</option>
+        <option style="background:orange" value="color">Orange</option>
+        <option style="background:yellow" value="color">Yellow</option>
+        <option style="background:green" value="color">Green</option>
+        <option style="background:blue" value="color">Blue</option>
+      </select>
+    </div> %>
+    <div class="setup-item">
+      <button class="new-game-btn flex">New Game</button>
+    </div>
+  </div>
+</div>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+</body>
+<script type="module" src="../js/Local.js"></script>
+</html>
